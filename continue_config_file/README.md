@@ -1,8 +1,8 @@
 # VS Code Continue extension
-The VS Code Continue extension provides AI assistance and auto-complete capabilities to VS Code. I use Continue instead of Cursor.AI because with Continue, I can configure it to use locally-hosted AI. I host my local AIs with Ollama in WSL2 environment. 
+The VS Code Continue extension provides AI assistance and auto-complete capabilities to VS Code. I use Continue instead of Cursor.AI because with Continue, I can configure it to use locally-hosted AI. I host my local AIs with Ollama in WSL2 environment. I mostly work from my laptop with RTX 3060 and Promox Desktop with RTX 3090. 
 
 ## Installation
-Install the VS Code Continue extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=cursorai.continue). If you are interested with my WSL2 setup, rough setup steps are available in this repo too.
+Install the VS Code Continue extension. If you are interested with my WSL2 setup, rough setup steps are available in this repo too.
 
 ## Config files
 - config_3060.json
