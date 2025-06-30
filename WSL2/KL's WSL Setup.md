@@ -25,6 +25,11 @@ https://docs.docker.com/desktop/install/linux/ubuntu/
 sudo docker run -d --network=host -v open-webui:/app/backend/data
 OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
+maybe better
+```
+sudo docker run -d --network=host -v open-webui:/app/backend/data
+OLLAMA_BASE_URL=http://0.0.0.0:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
 
 7. Steps 4-6 basically install and host these local servers every time you start your 
 ```
@@ -42,7 +47,11 @@ Llama is a good model to get started. For local GPU host, I usually prefer 8B to
 For the autocomplete capability, I've used deepseek and starcoder, both quite good. Download them from Ollama. 
 https://docs.continue.dev/customize/deep-dives/autocomplete
 
-9. In your WSL Ubuntu prompt, type "code ." to launch VS Code for your WSL environment. Find and install the "Continue" extension. You'll need to set up the LLMs to use. I'll give you my config.json for reference. 
+9. Add these two lines to ~/.bashrc
+- export OLLAMA_HOST=0.0.0.0:11434
+- nohup ollama serve > ~/.ollama/ollama.log 2>&1 &
+
+10. In your WSL Ubuntu prompt, type "code ." to launch VS Code for your WSL environment. Find and install the "Continue" extension. You'll need to set up the LLMs to use. I'll give you my config.json for reference. 
 
 VS Code with Continue basically the same capability of the popular CursorAI software except you have it hosted free locally.
 
